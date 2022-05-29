@@ -9,10 +9,42 @@
 
 </head>
 <body>
-    <div class="inputBox">
-        <label for="fname" class="fNameLabel">Input your number:</label>
-        <input id ="fname" type="text" class="fname" name="fname">
+    <div class='scoreContainer'>    
+        <div class="scoreTitle">Score</div>
+
+        <div class="scoreValues">
+            <div><p class="scoreValYou" id="scoreValYou">You: 0</p></div>
+            <div><p class="scoreValComputer" id="scoreValComputer">Computer: 0</p></div>
+        </div>
     </div>
+
+    <div class="inputBox">
+        <label for="playerValue" class="pValLabel">Input your selection:</label>
+        <input id ="playerValue" type="text" class="playerValue" name="playerValue">
+        <button type="button" id="submitBtn" onclick="runRounds()">
+            Submit
+        </button>
+    </div>
+
+    <div class="playsContainer">    
+        <div class="playerItem" id="playerItem">You chose:</div>
+        <div class="computerItem" id="computerItem">The computer chose:</div>
+    </div>
+
+    <div class="roundWinner" id="roundWinner">    
+        This round is won by: 
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id='winnerPar'>  </p>
+        </div>
+      
+    </div>
+    
     <script src="RockPaperScissors.js"></script>
 </body>
 </html>
